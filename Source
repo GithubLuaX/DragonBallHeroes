@@ -16,7 +16,7 @@ local OrionLib = {
 			Second = Color3.fromRGB(10, 10, 10),
 			Stroke = Color3.fromRGB(139, 0, 0),
 			Divider = Color3.fromRGB(60, 60, 60),
-			Text = Color3.fromRGB(255, 182, 193),
+			Text = Color3.fromRGB(255, 105, 180),
 			TextDark = Color3.fromRGB(150, 150, 150)
 		}
 	},
@@ -665,11 +665,11 @@ function OrionLib:MakeWindow(WindowConfig)
 	end)
 	
 	AddConnection(CloseBtn.MouseButton1Up, function()
-	  OrionLib:MakeNotification({Name = "ScriptHub -",Content = "O script será encerrado em 1 segundo. Prepare-se para o fechamento." ,Image = "rbxassetid://",Time = 7})task.wait(1)
+	  OrionLib:MakeNotification({Name = "ScriptHub",Content = "O script será encerrado em 1 segundo. Prepare-se para o fechamento." ,Image = "rbxassetid://",Time = 7})task.wait(1)
 	  Orion:Destroy()
 	end)
 
-	OrionLib:MakeNotification({Name = "ScriptHub -",Content = "Iniciando o script. Por favor, aguarde. |" ,Image = "rbxassetid://14824506141",Time = 7})
+	OrionLib:MakeNotification({Name = "ScriptHub",Content = "Iniciando o script. Por favor, aguarde. |" ,Image = "rbxassetid://14824506141",Time = 7})
 
 	local function LoadSequence()
 		MainWindow.Visible = false
