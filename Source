@@ -16,7 +16,7 @@ local OrionLib = {
 			Second = Color3.fromRGB(10, 10, 10),
 			Stroke = Color3.fromRGB(139, 0, 0),
 			Divider = Color3.fromRGB(60, 60, 60),
-			Text = Color3.fromRGB(240,240,240),
+			Text = Color3.fromRGB(255, 182, 193),
 			TextDark = Color3.fromRGB(150, 150, 150)
 		}
 	},
@@ -472,14 +472,14 @@ function OrionLib:MakeWindow(WindowConfig)
 	local UIHidden = false
 
 	WindowConfig = WindowConfig or {}
-	WindowConfig.Name = WindowConfig.Name or "SCouT HUB"
+	WindowConfig.Name = WindowConfig.Name or "ScriptHub"
 	WindowConfig.ConfigFolder = WindowConfig.ConfigFolder or WindowConfig.Name
 	WindowConfig.SaveConfig = WindowConfig.SaveConfig or false
 	WindowConfig.HidePremium = WindowConfig.HidePremium or false
 	if WindowConfig.IntroEnabled == nil then
 		WindowConfig.IntroEnabled = true
 	end
-	WindowConfig.IntroText = WindowConfig.IntroText or "SCouT HUB"
+	WindowConfig.IntroText = WindowConfig.IntroText or "ScriptHub"
 	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
 	WindowConfig.ShowIcon = WindowConfig.ShowIcon or false
 	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://8834748103"
@@ -665,11 +665,11 @@ function OrionLib:MakeWindow(WindowConfig)
 	end)
 	
 	AddConnection(CloseBtn.MouseButton1Up, function()
-	  OrionLib:MakeNotification({Name = "SCouT HUB -",Content = "HUB sendo apagado, dados não deletados." ,Image = "rbxassetid://",Time = 7})task.wait(1)
+	  OrionLib:MakeNotification({Name = "ScriptHub -",Content = "O script será encerrado em 1 segundo. Prepare-se para o fechamento." ,Image = "rbxassetid://",Time = 7})task.wait(1)
 	  Orion:Destroy()
 	end)
 
-	OrionLib:MakeNotification({Name = "SCouT HUB -",Content = "HUB sendo Iniciado |" ,Image = "rbxassetid://14824506141",Time = 7})
+	OrionLib:MakeNotification({Name = "ScriptHub -",Content = "Iniciando o script. Por favor, aguarde. |" ,Image = "rbxassetid://14824506141",Time = 7})
 
 	local function LoadSequence()
 		MainWindow.Visible = false
