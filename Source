@@ -22,7 +22,7 @@ TextDark = Color3.fromRGB(40, 40, 40) -- Cinza forte
 	},
 	SelectedTheme = "Default",
 	Folder = nil,
-	SaveCfg = false
+	SaveCfg = true
 }
 
 --Feather Icons https://github.com/evoincorp/lucideblox/tree/master/src/modules/util - Created by 7kayoh
